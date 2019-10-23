@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col m4"></div>
+    <div class="input-field col s12 m4">
+        <form id="form_limpiar">
+            <h5>Columna a limpiar:</h5>
+            <select id="columnas">
+                <option value="" disabled selected>Seleccione una opción</option>
+                {% for elem in json -%}
+                    <option value="{{ elem }}">{{ elem }}</option>
+                {% endfor -%}
+            </select>
+
+            <h5>Tipo de limpieza:</h5>
+            <select id="limpieza">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="1">Eliminar campos vacios</option>
+                <option value="2">Asignar 0 a campos que no sean un número</option>
+                <option value="3">Eliminar información duplicada</option>
+            </select>
+        
+            <div class="right-align">
+                <button type="submit" class="waves-effect waves-light btn-small"><i
+                        class="material-icons right">send</i>Enviar</button>
+            </div>
+        </form>
+    </div>
+    <div class="col m4"></div>
+</div>
+
+<div class="row">
+    <div class="col m4"></div>
+    <div class="col m4 center" id="content"></div>
+    <div class="col m4"></div>
+</div>
+
+<div id="script"></div>

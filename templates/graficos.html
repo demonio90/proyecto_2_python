@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col m4"></div>
+    <div class="input-field col s12 m4">
+        <form id="form_graficos">
+            <h5>Tipo de gráficos:</h5>
+            <select id="graficos">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="Lineal">Lineal</option>
+                <option value="Columnas">Columnas</option>
+                <option value="Barras">Barras</option>
+                <option value="Histograma">Histograma</option>
+                <option value="Porcentajes">Porcentajes</option>
+            </select>
+        
+           <h5>Columnas a usar:</h5>
+            <select id="columnas" name="columnas[]" multiple>
+                <option value="" disabled selected>Seleccione una opción</option>
+                {% for elem in json -%}
+                    <option value="{{ elem }}">{{ elem }}</option>
+                {% endfor -%}
+            </select>
+            <div class="right-align">
+                <button type="submit" class="waves-effect waves-light btn-small"><i
+                        class="material-icons right">send</i>Enviar</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col m4"></div>
+</div>
+
+<div class="row">
+    <div class="col m4"></div>
+    <div class="col m4">
+        <img id="img" class="responsive-img">
+    </div>
+    <div class="col m4"></div>
+</div>
+
+<div id="script"></div>

@@ -1,0 +1,24 @@
+<div class="row" style="height: 100%;">
+    <div class="col m4"></div>
+
+    <form id="form_fuente_datos" class="col m4" style="height: 100%;" enctype="multipart/form-data" action="/cargar_archivo", method="POST">
+        <h5>Por favor cargue el archivo:</h5>
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Archivo</span>
+                <input type="file" name="archivo" id="archivo">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+
+        <div class="right-align">
+            <button type="submit" class="waves-effect waves-light btn-small"><i class="material-icons right">backup</i>Cargar</button>
+        </div>
+    </form>
+
+    <div class="col m4"></div>
+</div>
+
+<div id="script"></div>
